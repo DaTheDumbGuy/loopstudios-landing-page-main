@@ -1,0 +1,19 @@
+.b-hero{
+
+    &__subtitle{
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        z-index:2;
+    }
+    &__background{
+        position: absolute;
+        inset:0;
+        z-index:1;
+        background-image:url("../../assets/images/mobile/image-hero.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+}
