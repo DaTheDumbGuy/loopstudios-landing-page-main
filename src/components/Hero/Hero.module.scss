@@ -1,9 +1,12 @@
 .b-hero{
-
+    background:grey;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    position: relative;
     &__subtitle{
-        position: absolute;
-        inset: 0;
-        margin: auto;
+        position: relative;
         z-index:2;
     }
     &__background{
@@ -17,3 +20,4 @@
         
     }
 }
+

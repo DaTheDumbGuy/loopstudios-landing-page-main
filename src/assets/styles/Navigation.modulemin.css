@@ -1,1 +1,1 @@
-.b-navigation{position:absolute;right:0;top:0;left:0;z-index:2;display:flex;justify-content:space-between;padding:2em 1.5em}.b-navigation__list{display:none}
+.b-navigation{display:flex;justify-content:space-between}.b-navigation__list{display:none}.b-navigation__list.show{position:absolute;top:0;left:0;bottom:0;right:0;background:#000;display:block}.b-navigation__list__header{display:flex;justify-content:space-between;align-items:center}.b-navigation button{background:rgba(0,0,0,0);border:none}
