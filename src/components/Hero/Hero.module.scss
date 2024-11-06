@@ -1,23 +1,37 @@
+@use '../../assets/sass/utilities/index' as util;
+@use '../../assets/sass/base/index' as base;
 .b-hero{
-    background:grey;
+    background:base.$color-white;
     height: 100vh;
     width: 100vw;
     display: grid;
     place-items: center;
     position: relative;
+    @include util.container-sm;
+    
     &__subtitle{
         position: relative;
+        top:-40px;
         z-index:2;
+        border: 2px solid base.$color-white;
+        color:base.$color-white;
+        padding:1.5rem;
     }
+
     &__background{
         position: absolute;
         inset:0;
         z-index:1;
         background-image:url("../../assets/images/mobile/image-hero.jpg");
-        background-position: center;
+        background-position: top;
         background-repeat: no-repeat;
-        background-size: cover;
-        
+        background-size:contain;
+    }
+    @media(min-width:430px) {
+        &__background{
+            background-size: cover;
+            background-image: url("../../assets/images/desktop/image-hero.jpg");
+        }
     }
 }
 

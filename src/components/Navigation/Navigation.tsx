@@ -17,13 +17,13 @@ export default function Navigation() {
                         <img src={closeIcon} alt="" />
                     </button>
                 </div>
-                <li className='b-navigation__item'><a href="#">About</a></li>
-                <li className='b-navigation__item'><a href="#">Careers</a></li>
-                <li className='b-navigation__item'><a href="#">Events</a></li>
-                <li className='b-navigation__item'><a href="#">Products</a></li>
-                <li className='b-navigation__item'><a href="#">Support</a></li>
+                <li className='b-navigation__list__item'><a href="#">About</a></li>
+                <li className='b-navigation__list__item'><a href="#">Careers</a></li>
+                <li className='b-navigation__list__item'><a href="#">Events</a></li>
+                <li className='b-navigation__list__item'><a href="#">Products</a></li>
+                <li className='b-navigation__list__item'><a href="#">Support</a></li>
             </ul>
-            <button onClick={()=> setShowNav(!showNav)}>
+            <button className="b-navigation__burgerBTN" onClick={()=> setShowNav(!showNav)}>
                 <img src={hamburger} alt="" />
             </button>
         </nav>
