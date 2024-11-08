@@ -3,15 +3,18 @@
 .b-hero{
     background:base.$color-white;
     height: 100vh;
+    max-height:780px;
     width: 100vw;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     @include util.container-sm;
     
     &__subtitle{
         position: relative;
-        top:-40px;
+        max-width:500px;
+        top:-100px;
         z-index:2;
         border: 2px solid base.$color-white;
         color:base.$color-white;
@@ -28,6 +31,9 @@
         background-size:contain;
     }
     @media(min-width:430px) {
+        &__subtitle{
+            top:-40px;
+        }
         &__background{
             background-size: cover;
             background-image: url("../../assets/images/desktop/image-hero.jpg");
@@ -35,3 +41,34 @@
     }
 }
 
+
+
+@media (min-width:768px) {
+    .b-hero{
+        justify-content: flex-start;
+
+    }
+}
+@media(min-width:1024px){
+    .b-hero{
+        &__subtitle{
+            top:-80px;
+            max-width:550px;
+        }
+        &__background{
+            background-size: contain;
+        }
+    }
+}
+@media(min-width:1440px){
+    .b-hero{
+        &__subtitle{
+            top:-40px;
+            max-width:600px;
+        }
+        &__background{
+            background-size: contain;
+        }
+        
+    }
+}

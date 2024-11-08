@@ -62,7 +62,7 @@
 
 @media (min-width:768px){
     .b-navigation{
-        @include util.container-md;    
+        // @include util.container-md;    
         &__burgerBTN{
             display: none;
             background:red;
@@ -72,11 +72,41 @@
 
             &__item{
                 margin-right:1rem;
+                &:last-child{
+                    margin-right:0;
+                }
             }
 
             &__header{
                 display: none;
             }
+        }
+  
+    }
+}
+
+
+@media (min-width:768px){
+    .b-navigation{
+        &__list{
+
+            &__item{
+                margin-right:1.5rem;
+            }
+
+        }
+  
+    }
+}
+@media (min-width:1024px){
+    .b-navigation{
+        padding-top:4em;
+        &__list{
+
+            &__item{
+                margin-right:1.5rem;
+            }
+
         }
   
     }
