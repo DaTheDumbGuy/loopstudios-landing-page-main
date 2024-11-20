@@ -9,7 +9,7 @@
         
         img{
             display: block;
-            width:120px;
+            width:150px;
         }
     }
 
@@ -88,6 +88,7 @@
 
 @media (min-width:768px){
     .b-navigation{
+
         &__list{
 
             &__item{
@@ -101,6 +102,14 @@
 @media (min-width:1024px){
     .b-navigation{
         padding-top:4em;
+
+        &__logo{
+
+            img{
+                width:180px;
+            }
+        }
+        
         &__list{
 
             &__item{

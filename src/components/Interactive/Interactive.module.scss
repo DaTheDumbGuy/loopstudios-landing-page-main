@@ -1,0 +1,83 @@
+@use '../../assets/sass/utilities/index' as util;
+@use '../../assets/sass/base/index' as base;
+
+.b-interactive{
+    @include util.container-sm;
+    text-align: center;
+
+    &__imgContainer{
+        width:100%;
+        height:220px;
+        margin-bottom:2rem;
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-image: url('../../assets/images/mobile/image-interactive.jpg');
+
+    }
+
+
+    &__body{
+
+        &__title{
+            margin-bottom: 1rem;
+        }
+        &__description{
+            color:base.$color-dark-gray;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .b-interactive{
+        width: 100%;
+        height:650px;
+
+        &__holder{
+            height:100%;
+            width:100%;
+            position: relative;
+        }
+        &__imgContainer{
+            position: absolute;
+            top:0;
+            left:0;
+            width:60%;
+            height:60%;
+        }
+        &__body{
+            position: absolute;
+            background:base.$color-white;
+            padding:2rem;
+            right:0;
+            bottom:0;
+            width:60%;
+            height:60%;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .b-interactive{
+        height:850px;
+
+        &__body{
+            padding:4rem;
+        }
+    }
+}
+
+@media (min-width:1440px) {
+    .b-interactive{
+        height:950px;
+
+        &__imgContainer{
+            width:55%;
+        }
+        &__body{
+            width:55%;
+            padding:4rem;
+        }
+    }
+
+}
