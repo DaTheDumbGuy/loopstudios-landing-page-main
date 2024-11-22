@@ -1,0 +1,138 @@
+@use '../../assets/sass/utilities/index' as util;
+@use '../../assets/sass/base/index' as base;
+
+.b-creations {
+    @include util.container-sm;
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom:1rem;
+
+        @media (min-width:768px) {
+            &{
+                justify-content: space-between;
+                margin-bottom:3rem;
+            }
+        }
+    }
+
+    &__see-all{
+        display:none;
+        margin: 1rem auto auto auto;
+        background:transparent;
+        border:1px solid black;
+        padding: 0.5rem 2.5rem;
+
+        @media (min-width:768px) {
+            &{
+                display:block;
+                margin:unset;
+            }
+        }
+        &.mobile{
+            display: block;
+
+            @media (min-width:768px) {
+                &{
+                    display:none;
+                }
+            }
+
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        gap: 1.5rem;
+
+        @media (min-width:1440px) {
+            justify-content: space-between;
+            gap:32.5px;
+        }
+
+    }
+    &__item{
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+
+        @media (min-width:768px) {
+            width: 256px;
+            max-width: unset;
+            height: 450px;
+        }
+
+        h3{
+            position: absolute;
+            color:white;
+            bottom: 0;
+            max-width:90px;
+            margin-bottom:1rem;
+            margin-left:1rem;
+        }
+
+    }
+
+
+    /* Example for setting a specific background image */
+    &__item:nth-child(1) {
+        background-image: url('../../assets/images/mobile/image-deep-earth.jpg');
+    }
+    &__item:nth-child(2) {
+        background-image: url('../../assets/images/mobile/image-night-arcade.jpg');
+    }
+    &__item:nth-child(3) {
+        background-image: url('../../assets/images/mobile/image-soccer-team.jpg');
+    }
+    &__item:nth-child(4) {
+        background-image: url('../../assets/images/mobile/image-grid.jpg');
+    }
+    &__item:nth-child(5) {
+        background-image: url('../../assets/images/mobile/image-from-above.jpg');
+    }
+    &__item:nth-child(6) {
+        background-image: url('../../assets/images/mobile/image-pocket-borealis.jpg');
+    }
+    &__item:nth-child(7) {
+        background-image: url('../../assets/images/mobile/image-curiosity.jpg');
+    }
+    &__item:nth-child(8) {
+        background-image: url('../../assets/images/mobile/image-fisheye.jpg');
+    }
+
+    @media (min-width:768px) {
+        
+        &__item:nth-child(1) {
+            background-image: url('../../assets/images/desktop/image-deep-earth.jpg');
+        }
+        &__item:nth-child(2) {
+            background-image: url('../../assets/images/desktop/image-night-arcade.jpg');
+        }
+        &__item:nth-child(3) {
+            background-image: url('../../assets/images/desktop/image-soccer-team.jpg');
+        }
+        &__item:nth-child(4) {
+            background-image: url('../../assets/images/desktop/image-grid.jpg');
+        }
+        &__item:nth-child(5) {
+            background-image: url('../../assets/images/desktop/image-from-above.jpg');
+        }
+        &__item:nth-child(6) {
+            background-image: url('../../assets/images/desktop/image-pocket-borealis.jpg');
+        }
+        &__item:nth-child(7) {
+            background-image: url('../../assets/images/desktop/image-curiosity.jpg');
+        }
+        &__item:nth-child(8) {
+            background-image: url('../../assets/images/desktop/image-fisheye.jpg');
+        }
+    }
+    /* Add similar rules for other items */
+}

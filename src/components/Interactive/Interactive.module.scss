@@ -4,6 +4,7 @@
 .b-interactive{
     @include util.container-sm;
     text-align: center;
+    margin-top:1.5rem;
 
     &__imgContainer{
         width:100%;
@@ -62,7 +63,7 @@
         height:850px;
 
         &__body{
-            padding:4rem;
+            padding:3.5rem;
         }
     }
 }

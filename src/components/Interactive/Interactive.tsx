@@ -1,4 +1,4 @@
-
+import '../../assets/styles/Interactive.modulemin.css';
 export default function Interactive(){
     return(
         <section className="b-interactive">
