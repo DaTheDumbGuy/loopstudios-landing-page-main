@@ -10,7 +10,7 @@ export default function Creations() {
             <ul className="b-creations__list">
                 {Array.from({ length: 8 }).map((_, index) => (
                     <li key={index} className="b-creations__item">
-                        <h3>{creationTitles[index]}</h3>
+                        <h3 className='b-creations__item__title'>{creationTitles[index]}</h3>
                     </li>
                 ))}
             </ul>

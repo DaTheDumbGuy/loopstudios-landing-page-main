@@ -1,10 +1,14 @@
 @use '../../assets/sass/utilities/index' as util;
 .b-navigation{
+    position: absolute;
+    z-index:3;
+    right:0;
+    left:0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     @include util.container-sm;
-
+    
     &__logo{
         
         img{
@@ -18,11 +22,12 @@
         list-style-type: none;
 
         &.show{
-            position: absolute;
+            position: fixed;
+            z-index:4;
             top:0;
             left:0;
-            bottom:0;
             right:0;
+            height:100vh;
             background:black;
             display:block;
             @include util.container-sm;
@@ -47,7 +52,26 @@
             }
         }
         &__item{
+            width: fit-content;
+            &:hover{
+                position: relative;
 
+                &::before{
+                    content: "";
+                    position: absolute;
+                    right:0;
+                    left:0;
+                    bottom:-5px;
+                    margin:auto;
+                    width:25px;
+                    height:2px;
+                    background:white;
+                    transform: scaleX(0); 
+                    transform-origin: left; 
+                    animation: expandScale 0.2s ease-in-out forwards; 
+    
+                }
+            }
             a{
                 color:white;
             }
@@ -118,5 +142,27 @@
 
         }
   
+    }
+}
+
+@media (min-width:1440px){
+    .b-navigation{
+        &__list{
+            &__item{
+                margin-right:2.5rem;
+            }
+
+        }
+  
+    }
+}
+
+
+@keyframes expandScale {
+    0% {
+        transform: scaleX(0); // Start at scale 0
+    }
+    100% {
+        transform: scaleX(1); // Scale to full width
     }
 }

@@ -63,23 +63,26 @@ body{
 }
 
 .b-interactive{
-
+    @media (min-width:768px) {
+        text-align: start;
+    }
     &__body{
 
         &__title{
             font-weight:300;
             font-size:2rem;
             text-transform: uppercase;
+
+            @media (min-width:1024px) {
+                font-size:2.5rem;
+            }
+            @media (min-width:1440px) {
+                font-size:3rem;
+            }
         }
         &__description{
             line-height: 1.5;
             font-weight:500;
-        }
-
-        @media (min-width:1024px) {
-            &__title{
-                font-size:3rem;
-            }
         }
     }
 }
@@ -97,5 +100,35 @@ body{
         text-transform: uppercase;
         font-family: "Ubuntu", serif;
         letter-spacing: 2px;
+    }
+
+    &__item{
+
+        &__title{
+            font-weight: 300;
+            text-transform: uppercase;
+
+
+            @media (min-width:768px) {
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+}
+
+.b-footer{
+    text-align: center;
+
+    &__link{
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    @media (min-width:768px) {
+        &__copyright{
+            text-align: end;
+        }
     }
 }

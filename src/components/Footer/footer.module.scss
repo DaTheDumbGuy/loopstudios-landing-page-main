@@ -1,0 +1,63 @@
+@use '../../assets/sass/utilities/index' as util;
+@use '../../assets/sass/base/index' as base;
+
+.b-footer{
+    background: black;
+    color:white;      
+    @include util.container-sm;
+    margin-top:5rem;
+    @media (min-width:1024px) {
+        margin-top:unset;
+    }
+
+    .b-navigation__logo img{
+        margin:auto;
+        margin-bottom: 2rem;
+    }
+    &__links{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        margin-bottom:2rem;
+    }
+    &__link{
+        color: white;
+    }
+
+    &__social{
+        display:flex;
+        justify-content: center;
+        gap:1rem;
+        margin-bottom:1rem;
+    }
+
+    @media (min-width:768px) {
+        .b-navigation__logo img{
+            width:130px;
+            margin:unset;
+            margin-bottom: 2rem;
+        }
+        &__content{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__links{
+            flex-direction: row;
+            grid-area:2/1/2/2;
+        }
+        &__social{
+            justify-content: flex-end;
+        }
+    }
+    @media (min-width:1024px) {
+        &__links{
+            gap:1.5rem;
+        }
+    }
+    @media (min-width:1440px) {
+        &__links{
+            gap:2rem;
+        }
+    }
+}
