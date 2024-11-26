@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-     <Router basename="/FEM-loopstudios/">
+     <Router basename="/loopstudios-landing-page-main">
         <Routes>
           <Route path="/" element={<Home/>} />
         </Routes>
